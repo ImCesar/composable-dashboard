@@ -1,0 +1,43 @@
+import React from "react";
+
+import { StoryBookWrapper } from "../../storybook";
+import MessageBoxComponent from './MessageBox';
+import { message } from '../models/message';
+import { Card } from "../../atoms";
+
+export default {
+  title: "Molecules.Message Box"
+};
+
+const messages: message[] = [
+  {
+    id: '0',
+    text: "Hey how's it going?",
+    sentFromUser: false,
+    sentFrom: "Cesar",
+    timeStamp: new Date()
+
+  },
+  {
+    id: '1',
+    text: "It's going good, and you?",
+    sentFromUser: true,
+    sentFrom: "Dog",
+    timeStamp: new Date()
+  },
+  {
+    id: '2',
+    text: "Going good too, want to go to a movie?",
+    sentFromUser: false,
+    sentFrom: "Cesar",
+    timeStamp: new Date()
+  },
+]
+
+export const MessageBox = () => (
+  <StoryBookWrapper>
+    <Card>
+      <MessageBoxComponent messages={messages}/>
+    </Card>
+  </StoryBookWrapper>
+);
