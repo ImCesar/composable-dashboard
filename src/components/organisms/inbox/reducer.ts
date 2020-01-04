@@ -1,15 +1,15 @@
-import { message } from '../../molecules/models/message';
+import { Message } from '../../../models/message';
 
-export type inboxState = {
-  messages: message[]; 
+export type InboxState = {
+  messages: Message[]; 
 }
 
-type inboxAction = 
-  | { type: "ADD_MESSAGE", message: message }
+type InboxAction = 
+  | { type: "ADD_MESSAGE", message: Message }
   | { type: "REMOVE_MESSAGE", id: string };
 
 
-export default (state: inboxState, action: inboxAction): inboxState => {
+export default (state: InboxState, action: InboxAction): InboxState => {
   switch(action.type) {
     case "ADD_MESSAGE":
       return { ...state, messages: [...state.messages, action.message]};

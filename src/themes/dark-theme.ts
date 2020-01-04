@@ -1,6 +1,6 @@
 import { createGlobalStyle, GlobalStyleComponent } from 'styled-components';
 
-type themeModel = {
+type ThemeModel = {
   color: {
     background: string;
     main: string;
@@ -9,7 +9,7 @@ type themeModel = {
   }
 
 }
-export const theme: themeModel = {
+export const theme: ThemeModel = {
   color: {
     background: "#222831",
     main: "#2d4059",
@@ -22,14 +22,19 @@ type GlobalStyleProps = {
   background?: string;
 }
 
-export const GlobalStyle: GlobalStyleComponent<GlobalStyleProps, themeModel> = createGlobalStyle`
+export const GlobalStyle: GlobalStyleComponent<GlobalStyleProps, ThemeModel> = createGlobalStyle`
   * {
     color: #eeeeee;
-    font-size: 62.5%;
     font-family: Roboto, sans-serif
   }
 
   html {
-  background-color: ${props => props.background ? props.background : "#222831"};
+    font-size: 62.5%;
+    background-color: ${props => props.background ? props.background : "#222831"};
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin: 0;
   }
 `;

@@ -1,10 +1,20 @@
 import React, { FunctionComponent } from "react";
 
-const CustomerProfile: FunctionComponent = () => {
+import { Card, CardTitle } from '../../atoms';
+import { Customer } from "../../../models/customer";
+import { ProfileDetails } from "../../molecules";
+
+type CustomerProfileProps = {
+  imageSrc: string;
+  customer: Customer;
+}
+
+const CustomerProfile: FunctionComponent<CustomerProfileProps> = ({ imageSrc, customer}) => {
   return (
-    <div>
-      <div>Hello</div>
-    </div>
+    <Card>
+      <CardTitle>Customer Profile</CardTitle>
+      <ProfileDetails customer={customer} imageSrc={imageSrc} />
+    </Card>
   );
 };
 

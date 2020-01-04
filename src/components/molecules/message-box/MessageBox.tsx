@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 
 import { MessageBoxContainer } from './style';
-import { message } from '../models/message';
+import { Message } from '../../../models/message';
 import InstantMessage from '../instant-message/InstantMessage';
 
 type MessageBoxProps = {
-  messages: message[];
+  messages: Message[];
 }
 
 const MessageBox: FunctionComponent<MessageBoxProps> = ({ messages }) => {

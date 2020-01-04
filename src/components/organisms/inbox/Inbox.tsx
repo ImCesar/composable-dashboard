@@ -1,16 +1,15 @@
-import React, { FunctionComponent, ComponentProps } from 'react';
-import styled from 'styled-components';
+import React, { FunctionComponent } from 'react';
 
 import { Card, CardTitle } from '../../atoms';
-import { InputSelect, MessageBox } from '../../molecules';
+import { InputSubmit, MessageBox } from '../../molecules';
 import { useInbox } from './useInbox';
-import { message } from '../../molecules/models/message';
+import { Message } from '../../../models/message';
 
 const Inbox: FunctionComponent = () => {
   const { messages, addMessage } = useInbox();
 
   const handleInputSubmit = (text: string) => {
-    const message: message = {
+    const message: Message = {
       id: Math.random().toString(),
       sentFromUser: true,
       sentFrom: "Cesar Avitia",
@@ -25,7 +24,7 @@ const Inbox: FunctionComponent = () => {
     <Card>
       <CardTitle>Inbox</CardTitle>
       <MessageBox messages={messages}/>
-      <InputSelect handleSubmit={handleInputSubmit}/>
+      <InputSubmit handleSubmit={handleInputSubmit}/>
     </Card>
   )
   

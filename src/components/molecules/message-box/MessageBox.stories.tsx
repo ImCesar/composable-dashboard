@@ -2,14 +2,14 @@ import React from "react";
 
 import { StoryBookWrapper } from "../../storybook";
 import MessageBoxComponent from './MessageBox';
-import { message } from '../models/message';
+import { Message } from '../../../models/message';
 import { Card } from "../../atoms";
 
 export default {
   title: "Molecules.Message Box"
 };
 
-const messages: message[] = [
+const messages: Message[] = [
   {
     id: '0',
     text: "Hey how's it going?",

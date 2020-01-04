@@ -1,8 +1,8 @@
 import { useReducer } from 'react';
-import reducer, { inboxState } from './reducer';
-import { message } from '../../molecules/models/message';
+import inboxReducer, { InboxState } from './reducer';
+import { Message } from '../../../models/message';
 
-const initialState: inboxState = {
+const initialState: InboxState = {
   messages: [
     {
       id: '0',
@@ -32,9 +32,9 @@ const initialState: inboxState = {
 } 
 
 export const useInbox = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(inboxReducer, initialState);
 
-  const addMessage = (message: message) => {
+  const addMessage = (message: Message) => {
     dispatch({ type: "ADD_MESSAGE", message });
   };
 
