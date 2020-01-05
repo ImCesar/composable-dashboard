@@ -1,0 +1,1 @@
+export { GlobalStyle, theme } from './dark-theme';

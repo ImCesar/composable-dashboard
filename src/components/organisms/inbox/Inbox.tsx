@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
 
-import { Card, CardTitle } from '../../atoms';
-import { InputSubmit, MessageBox } from '../../molecules';
+import { Card, InputSubmit, MessageBox } from '../../molecules';
 import { useInbox } from './useInbox';
 import { Message } from '../../../models/message';
+import { CardBody } from '../../atoms';
 
 const Inbox: FunctionComponent = () => {
   const { messages, addMessage } = useInbox();
@@ -21,8 +21,7 @@ const Inbox: FunctionComponent = () => {
   }
 
   return (
-    <Card>
-      <CardTitle>Inbox</CardTitle>
+    <Card title="inbox">
       <MessageBox messages={messages}/>
       <InputSubmit handleSubmit={handleInputSubmit}/>
     </Card>

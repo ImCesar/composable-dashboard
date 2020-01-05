@@ -3,7 +3,7 @@ import React from "react";
 import { StoryBookWrapper } from "../../storybook";
 import MessageBoxComponent from './MessageBox';
 import { Message } from '../../../models/message';
-import { Card } from "../../atoms";
+import { CardShell } from "../../atoms";
 
 export default {
   title: "Molecules.Message Box"
@@ -36,8 +36,8 @@ const messages: Message[] = [
 
 export const MessageBox = () => (
   <StoryBookWrapper>
-    <Card>
+    <CardShell>
       <MessageBoxComponent messages={messages}/>
-    </Card>
+    </CardShell>
   </StoryBookWrapper>
 );

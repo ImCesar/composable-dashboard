@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
 
-import { Card, CardTitle } from '../../atoms';
 import { Customer } from "../../../models/customer";
-import { ProfileDetails } from "../../molecules";
+import { Card, ProfileDetails } from "../../molecules";
+import { CardBody } from "../../atoms";
 
 type CustomerProfileProps = {
   imageSrc: string;
@@ -11,9 +11,10 @@ type CustomerProfileProps = {
 
 const CustomerProfile: FunctionComponent<CustomerProfileProps> = ({ imageSrc, customer}) => {
   return (
-    <Card>
-      <CardTitle>Customer Profile</CardTitle>
-      <ProfileDetails customer={customer} imageSrc={imageSrc} />
+    <Card title="Customer Profile">
+      <CardBody>
+        <ProfileDetails customer={customer} imageSrc={imageSrc} />
+      </CardBody>
     </Card>
   );
 };

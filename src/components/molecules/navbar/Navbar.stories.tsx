@@ -1,14 +1,14 @@
 import React from "react";
 
 import { StoryBookWrapper } from "../../storybook";
-import CardComponent from "./Card";
+import NavBarComponent from "./Navbar";
 
 export default {
-  title: "Atoms.Card"
+  title: "Atoms.Navbar"
 };
 
 export const Card = () => (
   <StoryBookWrapper>
-    <CardComponent />
+    <NavBarComponent />
   </StoryBookWrapper>
 );

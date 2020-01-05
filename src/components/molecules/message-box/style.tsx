@@ -5,5 +5,9 @@ export const MessageBoxContainer = styled('div')`
   overflow: auto;
   display: flex;
   flex-direction: column;
-  padding: 0.8rem;
+  padding-right: 1.0rem;
+  margin-right: -1.0rem;
+`;
+
+export const Bottom = styled('div')` 
 `;

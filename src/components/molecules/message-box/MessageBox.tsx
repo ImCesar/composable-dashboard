@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useRef, useEffect } from 'react';
 
-import { MessageBoxContainer } from './style';
+import { MessageBoxContainer, Bottom } from './style';
 import { Message } from '../../../models/message';
 import InstantMessage from '../instant-message/InstantMessage';
 
@@ -9,6 +9,15 @@ type MessageBoxProps = {
 }
 
 const MessageBox: FunctionComponent<MessageBoxProps> = ({ messages }) => {
+  const bottomRef = useRef<HTMLDivElement>(null); 
+
+  useEffect(() => {
+    const bottom = bottomRef.current;
+    if (bottom) {
+      bottom.scrollIntoView({ behavior: "smooth"});
+    }
+  }, [messages, bottomRef])
+
   return (
     <MessageBoxContainer>
       {messages.map(message => {
@@ -26,6 +35,7 @@ const MessageBox: FunctionComponent<MessageBoxProps> = ({ messages }) => {
           </InstantMessage>
         )
       })}
+      <div ref={bottomRef} /> 
     </MessageBoxContainer>
   );
 }

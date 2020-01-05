@@ -7,6 +7,6 @@ export const InputSelectContainer = styled('div')`
   align-content: space-between;
 
   & ${TextInput} {
-    width: 80%;
+    width: 75%;
   }
 `;
