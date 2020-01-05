@@ -3,7 +3,6 @@ import React, { FunctionComponent } from 'react';
 import { Card, InputSubmit, MessageBox } from '../../molecules';
 import { useInbox } from './useInbox';
 import { Message } from '../../../models/message';
-import { CardBody } from '../../atoms';
 
 const Inbox: FunctionComponent = () => {
   const { messages, addMessage } = useInbox();

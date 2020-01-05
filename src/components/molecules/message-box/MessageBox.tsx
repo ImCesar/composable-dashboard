@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useRef, useEffect } from 'react';
 
-import { MessageBoxContainer, Bottom } from './style';
+import { MessageBoxContainer } from './style';
 import { Message } from '../../../models/message';
 import InstantMessage from '../instant-message/InstantMessage';
 

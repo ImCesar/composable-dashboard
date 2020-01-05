@@ -7,9 +7,7 @@ export default {
 };
 
 export const InputSubmit = () => {
-  const handleInputSubmit = (text: string, event: FormEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-
+  const handleInputSubmit = (text: string) => {
     alert(text);
   }
 

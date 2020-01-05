@@ -8,6 +8,3 @@ export const MessageBoxContainer = styled('div')`
   padding-right: 1.0rem;
   margin-right: -1.0rem;
 `;
-
-export const Bottom = styled('div')` 
-`;
