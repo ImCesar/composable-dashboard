@@ -5,8 +5,8 @@ export type InboxState = {
 }
 
 type InboxAction = 
-  | { type: "ADD_MESSAGE", message: Message }
-  | { type: "REMOVE_MESSAGE", id: string };
+  | { type: "ADD_MESSAGE"; message: Message }
+  | { type: "REMOVE_MESSAGE"; id: string };
 
 
 export default (state: InboxState, action: InboxAction): InboxState => {
