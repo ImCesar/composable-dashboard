@@ -14,7 +14,7 @@ const MessageBox: FunctionComponent<MessageBoxProps> = ({ messages }) => {
   useEffect(() => {
     const bottom = bottomRef.current;
     if (bottom) {
-      bottom.scrollIntoView({ behavior: "smooth"});
+      bottom.scrollIntoView();
     }
   }, [messages, bottomRef])
 
