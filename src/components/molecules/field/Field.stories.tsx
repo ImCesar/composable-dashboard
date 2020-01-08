@@ -17,7 +17,7 @@ export const Field = () => (
 export const ValueAsChild = () => (
   <StoryBookWrapper>
     <FieldComponent label="Field">
-      <p>I'm a child</p>
+      <p>I&rsquo;m a child</p>
     </FieldComponent>
   </StoryBookWrapper>
 );

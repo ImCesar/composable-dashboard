@@ -1,4 +1,4 @@
-import React, { FormEvent } from "react";
+import React from "react";
 import { StoryBookWrapper } from "../../storybook";
 import InputSubmitComponent from './InputSubmit';
 
@@ -8,6 +8,7 @@ export default {
 
 export const InputSubmit = () => {
   const handleInputSubmit = (text: string) => {
+    // eslint-disable-next-line no-alert
     alert(text);
   }
 

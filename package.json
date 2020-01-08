@@ -2,7 +2,6 @@
   "name": "composable-dashboard",
   "version": "0.1.0",
   "description": "The code in this library is used as an example of an composable component library. It was created for talk on composition at the Phoenix Reactjs Meetup.",
-  "main": "index.ts",
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -93,7 +92,6 @@
     "url": "git+https://github.com/ImCesar/composable-dashboard.git"
   },
   "author": "Cesar Avitia",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ImCesar/composable-dashboard/issues"
   },

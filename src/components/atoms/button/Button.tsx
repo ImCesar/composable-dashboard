@@ -6,7 +6,7 @@ export default styled("button")`
   border: none;
   outline: none;
   border-radius: 1rem;
-  color: white;
+  color: ${props => props.theme?.color?.accent};
   background-color: ${props => props.theme?.color?.secondary};
   cursor: pointer;
 `;

@@ -10,7 +10,6 @@ module.exports = {
           process.env.JEST === 'true' && process.env.NODE_ENV === 'test'
             ? 'commonjs'
             : 'false',
-        useBuiltIns: 'usage',
         shippedProposals: true,
         corejs: 2,
         exclude: ['transform-typeof-symbol']

@@ -6,7 +6,7 @@ type ThemeModel = {
     main: string;
     secondary: string;
     accent: string;
-  }
+  };
 
 }
 export const theme: ThemeModel = {
@@ -25,7 +25,7 @@ type GlobalStyleProps = {
 export const GlobalStyle: GlobalStyleComponent<GlobalStyleProps, ThemeModel> = createGlobalStyle`
   * {
     color: #eeeeee;
-    font-family: Roboto, sans-serif
+    font-family: Roboto, sans-serif;
   }
 
   html {

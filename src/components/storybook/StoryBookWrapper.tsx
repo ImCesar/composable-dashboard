@@ -7,13 +7,11 @@ type StoryBookWrapperProps = {
   background?: string;
 }
 
-const StoryBookWrapper: FunctionComponent<StoryBookWrapperProps> = ({ background, children }) => {
-  return (
+const StoryBookWrapper: FunctionComponent<StoryBookWrapperProps> = ({ background, children }) => (
     <ThemeProvider theme={theme}>
       <GlobalStyle background={background}/>
       {children}
     </ThemeProvider>
   );
-};
 
 export default StoryBookWrapper;

@@ -8,13 +8,11 @@ type FieldProps = {
   value?: string;
 }
 
-const Field: FunctionComponent<FieldProps> = ({ label, value, children }) => {
-  return (
+const Field: FunctionComponent<FieldProps> = ({ label, value, children }) => (
     <FieldContainer>
       <Label>{label}: </Label>
       {value ? <><p>{value}</p>{children}</> : children}
     </FieldContainer>
-  )
-} 
+  ) 
 
 export default Field;

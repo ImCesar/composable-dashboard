@@ -16,7 +16,7 @@ module.exports = merge(common, {
       modulesDir: path.resolve(__dirname, '../node_modules')
     })
   ],
-  entry: ['./src/components/index.js'],
+  entry: ['./src/index.js'],
   output: {
     publicPath: '/',
     library: '',

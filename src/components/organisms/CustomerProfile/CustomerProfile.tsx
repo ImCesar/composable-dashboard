@@ -9,14 +9,12 @@ type CustomerProfileProps = {
   customer: Customer;
 }
 
-const CustomerProfile: FunctionComponent<CustomerProfileProps> = ({ imageSrc, customer}) => {
-  return (
+const CustomerProfile: FunctionComponent<CustomerProfileProps> = ({ imageSrc, customer }) => (
     <Card title="Customer Profile">
       <CardBody>
         <ProfileDetails customer={customer} imageSrc={imageSrc} />
       </CardBody>
     </Card>
   );
-};
 
 export default CustomerProfile;

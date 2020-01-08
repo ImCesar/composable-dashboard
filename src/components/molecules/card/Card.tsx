@@ -5,13 +5,11 @@ type CardProps = {
   title: string;
 }
 
-const Card: FunctionComponent<CardProps> = ({ children, title }) => {
-  return (
+const Card: FunctionComponent<CardProps> = ({ children, title }) => (
     <CardShell>
       <CardTitle>{title}</CardTitle>
       <CardBody>{children}</CardBody>
     </CardShell>
-  )
-};
+  );
 
 export default Card;
