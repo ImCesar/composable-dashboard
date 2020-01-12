@@ -53,7 +53,8 @@ module.exports = {
               {
                 loader: 'babel-loader',
                 options: {
-                  cacheDirectory: !isProd
+                  cacheDirectory: !isProd,
+                  extends: path.join(ROOT, 'babel.config.js') 
                 }
               }
             ]

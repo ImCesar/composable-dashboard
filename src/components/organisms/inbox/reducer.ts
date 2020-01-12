@@ -1,15 +1,15 @@
 import { Message } from '../../../models/message';
 
-export type InboxState = {
+export type MessageState = {
   messages: Message[]; 
 }
 
-type InboxAction = 
+type MessageAction = 
   | { type: "ADD_MESSAGE"; message: Message }
   | { type: "REMOVE_MESSAGE"; id: string };
 
 
-export default (state: InboxState, action: InboxAction): InboxState => {
+export default (state: MessageState, action: MessageAction): MessageState => {
   switch(action.type) {
     case "ADD_MESSAGE":
       return { ...state, messages: [...state.messages, action.message]};

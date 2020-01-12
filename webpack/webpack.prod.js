@@ -9,14 +9,14 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   bail: true,
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   mode: 'production',
   externals: [
     nodeExternals({
       modulesDir: path.resolve(__dirname, '../node_modules')
     })
   ],
-  entry: ['./src/index.js'],
+  entry: ['./src/index.ts'],
   output: {
     publicPath: '/',
     library: '',

@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react';
 
 import { Card, InputSubmit, MessageBox } from '../../molecules';
-import { useInbox } from './useInbox';
+import { useMessages } from './useMessages';
 import { Message } from '../../../models/message';
 
 const Inbox: FunctionComponent = () => {
-  const { messages, addMessage } = useInbox();
+  const { messages, addMessage } = useMessages();
 
   const handleInputSubmit = (text: string) => {
     const message: Message = {

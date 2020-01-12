@@ -2,7 +2,6 @@ import React, { FunctionComponent } from "react";
 
 import { Customer } from "../../../models/customer";
 import { Card, ProfileDetails } from "../../molecules";
-import { CardBody } from "../../atoms";
 
 type CustomerProfileProps = {
   imageSrc: string;
@@ -11,9 +10,7 @@ type CustomerProfileProps = {
 
 const CustomerProfile: FunctionComponent<CustomerProfileProps> = ({ imageSrc, customer }) => (
     <Card title="Customer Profile">
-      <CardBody>
-        <ProfileDetails customer={customer} imageSrc={imageSrc} />
-      </CardBody>
+      <ProfileDetails customer={customer} imageSrc={imageSrc} />
     </Card>
   );
 

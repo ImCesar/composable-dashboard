@@ -82,8 +82,12 @@
   "scripts": {
     "lint": "eslint --ext .ts,.tsx src/",
     "start": "npm run storybook",
+    "removePackage": "npm unpublish --force --registry http://localhost:4873 && npm run build",
+    "publish": "npm publish dist --registry http://localhost:4873",
     "build": "cross-env NODE_ENV=production webpack --mode production --config ./webpack/webpack.prod.js",
     "build:analyze": "cross-env NODE_ENV=production ANALYZE=true webpack --config ./webpack/webpack.prod.js",
+    "prebuild": "npm run generate:typedefs",
+    "generate:typedefs": "tsc --project ./tsconfig.json",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
