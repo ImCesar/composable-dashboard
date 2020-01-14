@@ -6,12 +6,9 @@ type MessageProps = {
 
 export const MessageContainer = styled('div')<MessageProps>`
   display: flex;
-  justify-content: ${({sent})=> sent ? 'flex-end' : 'flex-start'};
-
-  & p {
-    display: flex;
-    justify-content: ${({sent})=> sent ? 'flex-end' : 'flex-start'};
-  }
+  width: 40rem;
+  flex-direction: column;
+  align-items: ${({sent})=> sent ? 'flex-end' : 'flex-start'};
 `;
 
 export const MessageData = styled('p')<MessageProps>`
