@@ -8,6 +8,7 @@ type MessageProps = {
 const Message = styled('p')<MessageProps>`
   font-size: 1.4rem;
   padding: 0.8rem 0.8rem;
+  max-width: 70%;
   background-color: ${({theme, backgroundColor}) => backgroundColor || theme?.color?.accent};
   color: ${({theme, color})=> color || theme?.color?.main};
   border-radius: 0.4rem;

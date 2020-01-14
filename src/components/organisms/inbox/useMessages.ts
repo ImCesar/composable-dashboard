@@ -2,11 +2,11 @@ import { useReducer } from 'react';
 import inboxReducer, { MessageState } from './reducer';
 import { Message } from '../../../models/message';
 
-const initialState: MessageState = {
-  messages: []
-} 
+export const useMessages = (initialMessages?: Message[]) => {
+  const initialState: MessageState = {
+    messages: initialMessages || [] 
+  } 
 
-export const useMessages = () => {
   const [state, dispatch] = useReducer(inboxReducer, initialState);
 
   const addMessage = (message: Message) => {

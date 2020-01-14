@@ -3,5 +3,5 @@ export type Message = {
     text: string;
     sentFrom?: string;
     timeStamp?: Date;
-    sentFromUser: boolean;
+    sentFromUser?: boolean;
 }

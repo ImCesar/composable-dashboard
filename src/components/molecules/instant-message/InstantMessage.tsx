@@ -15,15 +15,13 @@ const InstantMessage: FunctionComponent<InstantMessageProps> = ({ sentBy, timeSe
 
   return (
     <MessageContainer sent={sent}>
-      <div>
-        <MessageData>{sentBy} - {timeSent}</MessageData>
-        <Message 
-          color={sent ? themeContext?.color?.accent : ""} 
-          backgroundColor={sent ? themeContext?.color?.background : ""}
-        >
-          {children}
-        </Message>
-      </div>
+      <MessageData>{sentBy} - {timeSent}</MessageData>
+      <Message 
+        color={sent ? themeContext?.color?.accent : ""} 
+        backgroundColor={sent ? themeContext?.color?.background : ""}
+      >
+        {children}
+      </Message>
     </MessageContainer>
   )
 } 
