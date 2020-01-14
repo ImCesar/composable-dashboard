@@ -4,3 +4,5 @@ export { default as InputSubmit } from './input-submit/InputSubmit';
 export { default as InstantMessage } from './instant-message/InstantMessage';
 export { default as ProfileDetails } from './profile-details/ProfileDetails';
 export { default as MessageBox } from './message-box/MessageBox';
+export { default as Tabs } from './tabs/Tabs';
+export { default as TabPanel } from './tabs/TabPanel';
