@@ -5,6 +5,4 @@ export const MessageBoxContainer = styled('div')`
   overflow: auto;
   display: flex;
   flex-direction: column;
-  padding-right: 1.0rem;
-  margin-right: -1.0rem;
 `;
