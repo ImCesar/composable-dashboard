@@ -4,7 +4,7 @@ import { StoryBookWrapper } from "../../storybook";
 import NavBarComponent from "./Navbar";
 
 export default {
-  title: "Atoms.Navbar"
+  title: "Molecules.Navbar"
 };
 
 export const Card = () => (
