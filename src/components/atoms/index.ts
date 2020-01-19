@@ -8,4 +8,5 @@ export { default as Link } from './link/Link';
 export { default as Message } from './message/Message';
 export { default as Nav } from './nav/Nav';
 export { default as ProfileImage } from './profile-image/ProfileImage';
+export { default as Select } from './select/Select';
 export { default as TextArea } from './textarea/TextArea';
