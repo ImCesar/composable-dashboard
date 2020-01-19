@@ -4,8 +4,12 @@ import { Card, InputSubmit, MessageBox } from '../../molecules';
 import { useMessages } from './useMessages';
 import { Message } from '../../../models/message';
 
-const Inbox: FunctionComponent = () => {
-  const { messages, addMessage } = useMessages();
+type InboxProps = {
+  initMessages?: Message[];
+}
+
+const Inbox: FunctionComponent<InboxProps> = ({ initMessages }) => {
+  const { messages, addMessage } = useMessages(initMessages);
 
   const handleInputSubmit = (text: string) => {
     const message: Message = {
